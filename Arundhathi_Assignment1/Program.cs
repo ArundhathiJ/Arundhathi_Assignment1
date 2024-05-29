@@ -47,7 +47,37 @@ class My_Virtual_Pet
 
             int options = Convert.ToInt32(Console.ReadLine());
 
+            switch(options)
+            {
+                case 1:
+                    Console.WriteLine("-------Feeding-------");
+                    hunger--;
+                    health++;
+                    if (hunger < 0)
+                        hunger = 0;
+                    Console.WriteLine("Hunger Decreased, Health is slightly Increased.");
+                    break;
+                    case 2:
+                    Console.WriteLine("-------Playing-------");
+                    happiness++;
+                    hunger++;
+                    if (happiness > 10)
+                        happiness = 10;
+                    if (hunger > 10)
+                        hunger = 10;
+                    Console.WriteLine("Happiness increased, hunger slightly increased.");
+                    break;
 
+                    break;
+                    case 3:
+                    Console.WriteLine("-------Resting-------");
+                    health++;
+                        happiness--;
+                    if (health>10)
+                        health = 10;
+                    Console.WriteLine("Health increased, happiness slightly decreased.");
+                    break;
+            }
 
 
 
