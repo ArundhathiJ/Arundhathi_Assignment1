@@ -85,7 +85,7 @@ class My_Virtual_Pet
                     break;
                 case 5:
                     Console.WriteLine("THANK YOU FOR PLAYING----", mypet_Name);
-                    Console.WriteLine("******GOOD BY*****");
+                    Console.WriteLine("******GOOD BYE*****");
                     Console.WriteLine("Exiting...");
 
                     return;
