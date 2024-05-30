@@ -8,32 +8,31 @@ class My_Virtual_Pet
 
     static void Main()
     {
-
+        Console.WriteLine("WELCOMES TO THE VIRTUAL PETS HEALTH STATION");
         Console.WriteLine("Choose your pets from the list!");
         Console.WriteLine("(1)DOG");
         Console.WriteLine("(2)CAT");
         Console.WriteLine("(3)BIRDS");
-
         string mypet_TYPE = Console.ReadLine();
-        Console.WriteLine("Could you please enter your pets name?");
+        Console.WriteLine("Your pet is   " + mypet_TYPE);
+
+        Console.WriteLine("Could you please enter your {0} name?", mypet_TYPE);
         String mypet_Name = Console.ReadLine();
         Console.WriteLine("HI {0} WELCOME TO THE PET VIRTUAL HEALTH", mypet_Name);
         int hunger = 5;
         int happiness = 5;
         int health = 5;
         while (true)
+
         {
             Console.WriteLine("Choose an action:");
             Console.WriteLine("1. Feed " + mypet_Name);
             Console.WriteLine("2. Play " + mypet_Name);
             Console.WriteLine("3. Rest " + mypet_Name);
-            Console.WriteLine("4. exit ");
+            Console.WriteLine("4.Status of "+ mypet_Name);
+            Console.WriteLine("5. Exit ");
             
-            Console.WriteLine("enter your choice");
-            Console.WriteLine("Pet Status:");
-            Console.WriteLine("Hunger   : {0}/10", hunger);
-            Console.WriteLine("Happiness: {0}/10", happiness);
-            Console.WriteLine("Health   : {0}/10", health);
+            
 
 
             if (hunger <= 2)
@@ -77,12 +76,29 @@ class My_Virtual_Pet
                         health = 10;
                     Console.WriteLine("Health increased, happiness slightly decreased.");
                     break;
+                case 4:
+                    Console.WriteLine("enter your choice");
+                    Console.WriteLine("Pet Status:");
+                    Console.WriteLine("Hunger   : {0}/10", hunger);
+                    Console.WriteLine("Happiness: {0}/10", happiness);
+                    Console.WriteLine("Health   : {0}/10", health);
+                    break;
+                case 5:
+                    Console.WriteLine("THANK YOU FOR PLAYING----", mypet_Name);
+                    Console.WriteLine("******GOOD BY*****");
+                    Console.WriteLine("Exiting...");
+
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice");
+                    break;
+
             }
 
 
 
-            
-            }
+
+        }
 
 
 
